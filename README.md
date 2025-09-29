@@ -10,7 +10,7 @@ Traditional Electronic Voting Machines (EVMs) are susceptible to various forms o
 
 - **Frontend**: React.js
 - **Blockchain**: Ethereum
-- **Smart Contracts**: Solidity
+- **Smart Contracts** : Solidity
 - **Web3 Integration**: Web3.js
 - **Development**: Truffle Suite
 - **Testing**: Ganache CLI
@@ -20,7 +20,7 @@ Traditional Electronic Voting Machines (EVMs) are susceptible to various forms o
 - **Secure Candidate Registration** - Contract owner can register candidates with names and addresses
 - **One-Vote-Per-Voter** - Blockchain ensures each address can vote only once
 - **Real-time Results** - View leading candidates and live vote counts
-- **Transparent Process** - All votes are recorded on the blockchain for public verification
+- **Transparent Process** - All votes ar recorded on the blockchain for public verification
 - **Voter Privacy** - Votes are anonymous while maintaining auditability
 
 ## Quick Start
