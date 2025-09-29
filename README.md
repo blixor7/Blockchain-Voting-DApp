@@ -1,34 +1,117 @@
-## For Truffle configured application checkout the "newbranch" above 
+# Blockchain Voting DApp
 
-# Election Dapp
+A decentralized voting application built on Ethereum that brings transparency and security to electoral processes using blockchain technology.
 
-Election nowadays happens using Electronic voting machine(EVM) whcih can face frauds
+## Overview
 
-Bringing blockchain into voting will help remove these frauds and make voting more open for all to actually see the number of votes without knowing the voters
+Traditional Electronic Voting Machines (EVMs) are susceptible to various forms of fraud and manipulation. This Blockchain Voting DApp leverages Ethereum smart contracts to create a tamper-proof, transparent voting system where votes are publicly verifiable while maintaining voter privacy.
 
-# Made using:-
+## Tech Stack
 
-1. Reactjs 
-2. Etherium 
-3. Solidity
-4. Web3
+- **Frontend**: React.js
+- **Blockchain**: Ethereum
+- **Smart Contracts**: Solidity
+- **Web3 Integration**: Web3.js
+- **Development**: Truffle Suite
+- **Testing**: Ganache CLI
 
-# Features of this application:-
+## Key Features
 
-1. Owner of the contract can register candidates with there name and address
-2. Voters can vote for the candidate using there addresses
-3. A voter can give vote only once
-4. Leading candidates details can be viewed
+- **Secure Candidate Registration** - Contract owner can register candidates with names and addresses
+- **One-Vote-Per-Voter** - Blockchain ensures each address can vote only once
+- **Real-time Results** - View leading candidates and live vote counts
+- **Transparent Process** - All votes are recorded on the blockchain for public verification
+- **Voter Privacy** - Votes are anonymous while maintaining auditability
 
-# App Screenshot
+## Quick Start
 
-![](ss.png)
+### Prerequisites
 
-# Setting up Metamask
-1. Download metamask extenstion from https://metamask.io/
-2. After installation, it'll take you to a window to set a password. Select the option to import wallet from seed phrase and set a password.
-3. Use the mnemonic from the ganache instance.
-4. A localhost blockchain would be added in the list of networks. Change the port number to 7545. Set the chain id as 1337.
-5. Then you'll see, metamask will ask your permission to connect all the 10 accounts to the webapp.
-6. Initially only the first account would be connected. Click on add account, then the second account would be added, then third and so on.
+- Node.js (v14 or higher)
+- MetaMask browser extension
+- Ganache CLI or GUI
 
+### Installation & Setup
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/0xPleiades/Voting-Dapp.git
+   cd Voting-Dapp
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Configure MetaMask**
+   - Install MetaMask from [metamask.io](https://metamask.io/)
+   - Choose "Import Wallet" and use Ganache's seed phrase
+   - Add local network: `http://localhost:7545` with Chain ID `1337`
+   - Import all test accounts from Ganache
+
+4. **Deploy Smart Contracts**
+   ```bash
+   truffle migrate --reset
+   ```
+
+5. **Start the Application**
+   ```bash
+   npm start
+   ```
+
+## Project Structure
+
+```
+Voting-Dapp/
+├── build/contracts/          # Compiled contract artifacts
+├── client/                   # React frontend application
+├── contracts/                # Solidity smart contracts
+│   └── Election.sol         # Main voting contract
+├── migrations/               # Deployment scripts
+├── test/                    # Smart contract tests
+├── truffle-config.js        # Truffle configuration
+└── package.json            # Project dependencies
+```
+
+## How It Works
+
+### For Contract Owners:
+1. Deploy the voting contract
+2. Register candidates with their details
+3. Monitor voting process in real-time
+
+### For Voters:
+1. Connect MetaMask wallet
+2. Browse registered candidates
+3. Cast your vote (one-time only)
+4. View live election results
+
+## Security Features
+
+- **Immutable Voting Records** - Once cast, votes cannot be altered
+- **Prevention of Double Voting** - Smart contract logic prevents multiple votes
+- **Transparent Tallying** - Vote counts are publicly verifiable
+- **Anonymous Voting** - Voter identities are protected
+
+## Testing
+
+Run the test suite to verify contract functionality:
+
+```bash
+truffle test
+```
+
+## Live Demo
+
+The application runs on `http://localhost:3000` after starting the development server.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
+
+## License
+
+This project is licensed under the MIT License.
+
+---
