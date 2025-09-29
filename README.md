@@ -35,7 +35,7 @@ Traditional Electronic Voting Machines (EVMs) are susceptible to various forms o
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/0xPleiades/Voting-Dapp.git
+   git clone https://github.com/blixor7/Blockchain-Voting-DApp.git
    cd Voting-Dapp
    ```
 
